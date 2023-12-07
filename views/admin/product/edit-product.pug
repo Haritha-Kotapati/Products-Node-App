@@ -1,0 +1,23 @@
+extends ../admin-layout
+
+block main-content
+
+    section.add-product
+        h2 Edit Product
+        if (selectedProduct !== undefined || selectedProduct !== null)
+            form(action='/admin/product/edit/submit', method='POST')
+                div
+                    label(for='name') Product Name:&nbsp;
+                    input(type='text', id='name', name='name', required, value=selectedProduct.name)
+                
+                div
+                    label(for='price') Price:&nbsp;
+                    input(type='number', id='price', name='price', step='0.01', required, value=selectedProduct.price)
+                
+                div
+                    label(for='image') Image URL:&nbsp;
+                    input(type='text', id='image', name='image', required, value=selectedProduct.image)
+                
+                div 
+                    input(type="hidden", name="id", value=selectedProduct._id)
+                    button(type='submit') Edit Product

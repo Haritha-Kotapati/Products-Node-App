@@ -1,0 +1,30 @@
+extends admin-layout
+
+block main-content
+    h2 Admin Home Page
+
+    .summary
+        if (products)
+            .card
+                .card-header
+                    p Total Products
+                .card-body
+                    h2 #{products.length}
+
+            .card
+                .card-header
+                    p Total Order
+                .card-body
+                    h2 15
+
+            .card
+                .card-header
+                    p Revenue
+                .card-body
+                    h2 CAD 500
+
+            .card
+                .card-header
+                    p Users
+                .card-body
+                    h2 7

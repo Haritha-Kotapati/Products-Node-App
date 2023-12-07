@@ -1,0 +1,13 @@
+extends layout 
+
+block main-content
+    
+    h2 Trending Products 
+    .product-container
+        if (products && products.length > 0)
+            each product in products
+                .product-card 
+                    img(src=`${product.image}`, alt=`${product.name}`).product-image
+                    h3.product-name= `${product.name}`
+                    p.product-price= `CAD ${product.price}`
+                    button.add-to-cart Add to Cart

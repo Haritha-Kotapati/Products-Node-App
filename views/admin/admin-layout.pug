@@ -1,0 +1,27 @@
+doctype html
+html
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title #{title} Assignment 1 - Node JS
+        link(rel='stylesheet', type="text/css", href='/css/styles.css')
+
+    body
+        header#header 
+            .header-content
+                h2#sitename 
+                    a(href="/").title #{title}
+        nav
+            ul
+                li
+                    a(href='/admin') Admin Home
+                li
+                    a(href='/admin/product') Products
+                li
+                    a(href='/') Go to Home
+        main#main 
+            block main-content
+        
+        footer
+            p &copy; Assignment 1 - HTTP5211, 2023. All rights reserved.

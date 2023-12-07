@@ -1,0 +1,20 @@
+extends ../admin-layout
+
+block main-content
+
+    section.add-product
+        h2 Add Product
+        form(action='/admin/product/add/submit', method='POST')
+            div
+                label(for='name') Product Name:&nbsp;
+                input(type='text', id='name', name='name', required)
+            
+            div
+                label(for='price') Price:&nbsp;
+                input(type='number', id='price', name='price', step='0.01', required)
+            
+            div
+                label(for='image') Image URL:&nbsp;
+                input(type='text', id='image', name='image', required)
+            
+            button(type='submit') Add Product
